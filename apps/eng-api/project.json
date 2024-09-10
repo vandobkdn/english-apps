@@ -1,0 +1,26 @@
+{
+  "name": "eng-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/eng-api/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "eng-api:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "eng-api:build:development"
+        },
+        "production": {
+          "buildTarget": "eng-api:build:production"
+        }
+      }
+    }
+  }
+}
