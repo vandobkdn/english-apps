@@ -9,10 +9,10 @@
     "start:ui": "yarn nx serve eng-app",
     "clean-build": "rm -rf dist",
     "clean-cache": "npx nx clear-cache",
-    "build": "yarn run clean-build && npx nx run-many --target=build --projects eng-book eng-services",
-    "format-libs": "prettier --write \"libs/**/*.{ts, tsx}\"",
-    "format-apps": "prettier --write \"apps/**/*.{ts, tsx}\"",
-    "format-md": "prettier --write \"**/*.md\""
+    "build": "yarn run clean-build && npx nx run-many --target=build --projects eng-api eng-app",
+    "format:libs": "prettier --write \"libs/**/*.{ts, tsx}\"",
+    "format:apps": "prettier --write \"apps/**/*.{ts, tsx}\"",
+    "format:md": "prettier --write \"README.md\""
   },
   "private": true,
   "dependencies": {
