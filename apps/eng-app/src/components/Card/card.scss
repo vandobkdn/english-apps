@@ -1,0 +1,52 @@
+@import '../../styles/variables';
+
+.card {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  border: 2px solid $red;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  height: 180px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #f9f9f9;
+
+  &.card-down {
+    height: 280px;
+  }
+
+  &.border-green {
+    border-color: $green;
+  }
+
+  &.border-red {
+    border-color: $red;
+  }
+
+  &.border-yellow {
+    border-color: $yellow;
+  }
+
+  &.border-brown {
+    border-color: $brown;
+  }
+
+  &.border-pink {
+    border-color: $pink;
+  }
+
+  .card-text {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+  }
+}

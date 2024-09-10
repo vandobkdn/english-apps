@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .navigator {
+    display: flex;
+    gap: $space;
+    font-size: medium;
+
+    li {
+      cursor: pointer;
+      padding: 0.5 * $space $space;
+      &:hover,
+      &.active {
+        color: white;
+        border-radius: 3px;
+        padding: 0.5 * $space $space;
+        background: $textHoverColor;
+        transition: background-color 0.5s, transform 0.5s;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    // flex-direction: column;
+    // gap: 0.5 * $space;
+    // align-items: flex-start;
+    height: 80px;
+    display: grid;
+    grid-template-rows: minmax(0, 35px) 1fr;
+    grid-template-columns: 1fr;
+
+    .navigator {
+      font-size: small;
+
+      li {
+        padding: 0.25 * $space;
+        &:hover,
+        &.active {
+          padding: 0.25 * $space;
+        }
+      }
+    }
+  }
+}

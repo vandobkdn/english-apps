@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/variables';
+
+.container {
+  width: 100vw;
+  background-color: $bgColor;
+  padding: $space;
+  color: $textColor;
+  font-size: x-large;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(0, 80px) 1fr;
+  grid-template-columns: 1fr;
+  gap: 2 * $space;
+}
+
+.content {
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.h-full {
+  max-height: 100%;
+}
+
+.w-full {
+  max-width: 100%;
+}

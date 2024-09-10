@@ -10,8 +10,8 @@
     "clean-build": "rm -rf dist",
     "clean-cache": "npx nx clear-cache",
     "build": "yarn run clean-build && npx nx run-many --target=build --projects eng-api eng-app",
-    "format:libs": "prettier --write \"libs/**/*.{ts, tsx}\"",
-    "format:apps": "prettier --write \"apps/**/*.{ts, tsx}\"",
+    "format:libs": "prettier --write \"libs/**/*.{ts,tsx,css,scss}\"",
+    "format:apps": "prettier --write \"apps/**/*.{ts,tsx,css,scss}\"",
     "format:md": "prettier --write \"README.md\""
   },
   "private": true,
@@ -20,6 +20,7 @@
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
     "axios": "^1.6.0",
+    "classnames": "^2.5.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-router-dom": "6.11.2",

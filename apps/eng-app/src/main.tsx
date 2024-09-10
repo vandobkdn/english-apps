@@ -2,13 +2,19 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
+import { AppContextProvider } from './app.context';
+
+import App from './App';
+
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 root.render(
   <StrictMode>
-    <BrowserRouter>
-      <h1>Say hello from EngApp</h1>
-    </BrowserRouter>
-  </StrictMode>
+    <AppContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AppContextProvider>
+  </StrictMode>,
 );
