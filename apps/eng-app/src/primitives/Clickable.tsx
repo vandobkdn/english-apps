@@ -14,7 +14,7 @@ type Props = {
   isDisabled?: boolean;
   className?: string;
   attrs?: HTMLAttributes<HTMLImageElement> & {
-    [p: `data-${string}`]: string | undefined;
+    [p: `${string}`]: string | undefined;
   };
 };
 

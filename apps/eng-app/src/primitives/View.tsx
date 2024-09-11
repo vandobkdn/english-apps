@@ -5,7 +5,7 @@ type Props = {
   children: ReactNode;
   className?: string;
   attrs?: HTMLAttributes<HTMLElement> & {
-    [p: `data-${string}`]: string;
+    [p: `${string}`]: string;
   };
   tag?: 'div' | 'nav' | 'span' | 'main' | 'ul' | 'li';
 };

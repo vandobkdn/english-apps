@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 type Props = {
   attrs?: HTMLAttributes<HTMLImageElement> & {
-    [p: `data-${string}`]: string | undefined;
+    [p: `${string}`]: string | undefined;
   };
   src: string | undefined;
   alt?: string;

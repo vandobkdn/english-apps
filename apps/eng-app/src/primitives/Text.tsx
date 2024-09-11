@@ -5,9 +5,9 @@ type Props = {
   children: ReactNode;
   className?: string;
   attrs?: HTMLAttributes<HTMLElement> & {
-    [p: `data-${string}`]: string;
+    [p: `${string}`]: string;
   };
-  tag?: 'p' | 'textarea' | 'label' | 'small' | 'strong' | 'h1' | 'h2' | 'h3';
+  tag?: 'p' | 'label' | 'small' | 'strong' | 'h1' | 'h2' | 'h3';
 };
 
 export const Text = ({ children, attrs, className, tag = 'p' }: Props) => {

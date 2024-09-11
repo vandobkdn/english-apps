@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.field-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid $borderColor;
+  border-radius: 4px;
+  padding: 5px 10px;
+  width: 250px;
+  background-color: $white;
+
+  .search-icon {
+    color: $bgColor;
+    margin-right: 0.5 * $space;
+    font-size: $space;
+  }
+
+  .search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .field-search {
+    width: 100%;
+  }
+}
