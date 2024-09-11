@@ -12,8 +12,8 @@ export const WordItem = ({ word, pron, translation, examples }: Word) => {
         <Text>{word}</Text>
         <Text tag="small">({pron})</Text>
       </View>
-      <Text className="example">{translation.en}</Text>
-      <Text className="example">{examples}</Text>
+      <Text>{translation.en}</Text>
+      <Text>{examples}</Text>
     </View>
   );
 };
