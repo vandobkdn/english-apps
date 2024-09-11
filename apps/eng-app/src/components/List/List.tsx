@@ -64,8 +64,8 @@ const WORDS = [
 export const List = () => {
   return (
     <View className="list-words">
-      {WORDS.map((word) => (
-        <WordItem {...word} />
+      {WORDS.map((word, index) => (
+        <WordItem key={index} {...word} />
       ))}
     </View>
   );

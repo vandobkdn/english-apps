@@ -2,7 +2,6 @@ import { View } from './primitives';
 import { Header, Card, FieldSearch, WordItem, List } from './components';
 import { useAppContext } from './app.context';
 import './app.scss';
-// Say hello from EngApp
 
 const WORD = {
   word: 'abandon',
