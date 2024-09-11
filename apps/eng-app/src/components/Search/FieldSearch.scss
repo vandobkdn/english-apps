@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   border: 1px solid $borderColor;
-  border-radius: 4px;
+  border-radius: $borderRadius;
   padding: 5px 10px;
   width: 250px;
   background-color: $white;
@@ -16,6 +16,7 @@
   }
 
   .search-input {
+    position: relative;
     border: none;
     outline: none;
     flex: 1;

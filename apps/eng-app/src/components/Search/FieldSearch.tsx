@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { ViewRef, Field } from '../../primitives';
+import { View, ViewRef, Field } from '../../primitives';
 
 import './FieldSearch.scss';
 
@@ -8,7 +8,9 @@ export const FieldSearch = () => {
 
   return (
     <ViewRef ref={ref} className="field-search">
-      <span className="search-icon">&#128269;</span>
+      <View tag="span" className="search-icon">
+        &#128269;
+      </View>
       <Field attrs={{ placeholder: 'Search...' }} className="search-input" />
     </ViewRef>
   );

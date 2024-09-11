@@ -1,5 +1,5 @@
 import { View } from './primitives';
-import { Header, Card, FieldSearch } from './components';
+import { Header, Card, FieldSearch, WordItem, List } from './components';
 import { useAppContext } from './app.context';
 import './app.scss';
 // Say hello from EngApp
@@ -22,7 +22,7 @@ const App = () => {
     <View className="container">
       <Header />
       <View className="content" tag="main">
-        <FieldSearch />
+        <List />
       </View>
     </View>
   );
