@@ -3,3 +3,5 @@ export type Navigation =
   | 'My Words'
   | 'Learning Words'
   | 'Add Word';
+
+  export type SearchTypes = 'word' | 'playlist';

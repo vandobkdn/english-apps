@@ -1,0 +1,107 @@
+@import '../../../styles/variables';
+@import '../../../styles/scroll';
+
+.result-container {
+  .result-titles {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 10px;
+    p {
+      font-size: large;
+      opacity: 0.6;
+      padding: 0.5 * $space;
+    }
+
+    &.single-column {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .search-result {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 10px;
+    min-height: fit-content;
+    max-height: 80vh;
+
+    &.single-column {
+      grid-template-columns: 1fr;
+    }
+
+    .exact-result {
+      max-height: 60vh;
+      background-color: darken($white, 20%);
+      padding: $space;
+      border-radius: $borderRadius;
+      border-color: $borderColor;
+      display: grid;
+      gap: $space;
+      grid-template-rows: 1fr, minmax(0, 5vh);
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        h1 {
+          font-size: 2.5 * $space;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: $space;
+          font-weight: normal;
+        }
+
+        small {
+          font-size: 20px;
+        }
+      }
+
+      button {
+        background: transparent;
+        transition: transform 0.5s;
+        font-size: 14px;
+
+        &:hover {
+          transform: scale(1.2);
+          text-transform: capitalize;
+          cursor: pointer;
+          color: $blue;
+        }
+      }
+    }
+
+    .related-results {
+      padding: $space;
+      background-color: $white;
+      border-color: $borderColor;
+      border-radius: $borderRadius;
+      max-height: 80vh;
+      overflow: auto;
+      @extend %scroll;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .result-container {
+    .result-titles {
+      grid-template-columns: 1fr;
+      p:first-child {
+        display: none;
+      }
+    }
+
+    .search-result {
+      grid-template-columns: 1fr;
+      min-height: fit-content;
+      max-height: 80vh;
+      .exact-result {
+        display: none;
+      }
+    }
+  }
+}

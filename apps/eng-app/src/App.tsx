@@ -1,5 +1,12 @@
 import { View } from './primitives';
-import { Header, Card, FieldSearch, WordItem, List } from './components';
+import {
+  Header,
+  Card,
+  FieldSearch,
+  WordItem,
+  List,
+  SearchResult,
+} from './components';
 import { useAppContext } from './app.context';
 import './app.scss';
 
@@ -21,7 +28,7 @@ const App = () => {
     <View className="container">
       <Header />
       <View className="content" tag="main">
-        <List />
+        <SearchResult />
       </View>
     </View>
   );
