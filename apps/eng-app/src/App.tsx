@@ -1,3 +1,5 @@
+import { Routes, Route } from 'react-router-dom';
+
 import { View } from './primitives';
 import {
   Header,
@@ -28,7 +30,10 @@ const App = () => {
     <View className="container">
       <Header />
       <View className="content" tag="main">
-        <SearchResult />
+        <Routes>
+          <Route path="/" element={<>Home page</>} />
+          <Route path="/" element={<>Home page</>} />
+        </Routes>
       </View>
     </View>
   );

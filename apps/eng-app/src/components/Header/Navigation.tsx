@@ -1,32 +1,20 @@
-import { Navigation as NavigationType } from '@english/shared-models';
+import { NAV_ITEM } from '@english/shared-models';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import { View, Clickable } from '../../primitives';
-import { useAppContext } from '../../app.context';
-
-type NavItemType = { label: NavigationType; path: string };
-
-const NAV_ITEMS: NavItemType[] = [
-  { label: 'Word List', path: '/words' },
-  { label: 'My Words', path: '/my-words' },
-  { label: 'Learning Words', path: '/learn-words' },
-  { label: 'Add Word', path: '/new-words' },
-];
 
 const Navigation = () => {
-  const {
-    state: { activeNav },
-    setActiveNav,
-  } = useAppContext();
+  const navigateTo = useNavigate();
+  const { pathname } = useLocation();
 
-  console.log('activeNav', activeNav);
   return (
     <View tag="ul" className="navigator">
-      {NAV_ITEMS.map(({ label }) => (
+      {Object.entries(NAV_ITEM).map(([path, label]) => (
         <Clickable
           key={label}
           tag="li"
-          className={`${activeNav === label ? 'active' : ''}`}
-          onClick={() => setActiveNav(label)}
+          className={`${pathname === `/${path}` ? 'active' : ''}`}
+          onClick={() => navigateTo(`/${path}`)}
         >
           {label}
         </Clickable>

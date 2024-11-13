@@ -28,7 +28,6 @@ const reducer = (state: State, { type, payload }: Action): State => {
       };
     }
     case 'FLIP_CARD': {
-      console.log('payload', payload);
       return {
         ...state,
         isCardUp: payload === 'up',
