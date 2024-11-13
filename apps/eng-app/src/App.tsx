@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { NAV_ITEM } from '@english/shared-models';
 
 import { View } from './primitives';
 import {
@@ -9,6 +10,13 @@ import {
   List,
   SearchResult,
 } from './components';
+import {
+  HomePage,
+  ListWordPage,
+  MyWordPage,
+  LearningWordPage,
+  AddNewWordPage,
+} from './pages';
 import { useAppContext } from './app.context';
 import './app.scss';
 
@@ -31,8 +39,11 @@ const App = () => {
       <Header />
       <View className="content" tag="main">
         <Routes>
-          <Route path="/" element={<>Home page</>} />
-          <Route path="/" element={<>Home page</>} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/list-words" element={<ListWordPage />} />
+          <Route path="/my-words" element={<MyWordPage />} />
+          <Route path="/learn-words" element={<LearningWordPage />} />
+          <Route path="/add-new-words" element={<AddNewWordPage />} />
         </Routes>
       </View>
     </View>
