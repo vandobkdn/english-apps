@@ -1,9 +1,13 @@
-import { Word } from '@english/shared-models';
+import {
+  CATEGORIES_OPTIONS,
+  LEVELS_OPTIONS,
+  Word,
+} from '@english/shared-models';
 import { FormConfigs } from '../../hooks/useForm';
 import { Form } from '../Form';
 import { Button } from '../Button';
 import { View } from '../../primitives';
-import { FieldArrays, FieldText } from '../Fields';
+import { FieldArrays, FieldMultiSelect, FieldText } from '../Fields';
 
 import styles from './Form.module.scss';
 
@@ -94,12 +98,21 @@ export const AddWordForm = () => {
               }
               value={value.translation.vi}
             />
+
             <FieldText
               name="audio"
               label="Audio Link"
               isRequired={false}
               onChange={(val) => updateField('audio', val)}
-              value={value.pron}
+              value={value.audio}
+            />
+
+            <FieldMultiSelect
+              name="levels"
+              label="Levels"
+              options={LEVELS_OPTIONS}
+              isRequired={false}
+              onChange={(val) => updateField('levels', val)}
             />
           </View>
 
@@ -107,6 +120,7 @@ export const AddWordForm = () => {
             <FieldArrays
               name="examples"
               label="Examples"
+              isRequired
               values={value.examples}
               onChange={(val) => updateField('examples', val)}
             />
@@ -126,9 +140,22 @@ export const AddWordForm = () => {
               values={value.antonyms || []}
               onChange={(val) => updateField('antonyms', val)}
             />
+
+            <FieldMultiSelect
+              name="subjects"
+              label="Subjects"
+              options={CATEGORIES_OPTIONS}
+              isRequired={false}
+              onChange={(val) => updateField('subjects', val)}
+            />
           </View>
 
-          <Button skin="primary" type="submit" isDisabled={!isValid}>
+          <Button
+            className={styles.submit}
+            skin="primary"
+            type="submit"
+            isDisabled={!isValid}
+          >
             Submit
           </Button>
         </View>

@@ -6,6 +6,13 @@
   @include field;
 }
 
+.flex-inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .container {
   width: 100vw;
   background-color: $bgColor;

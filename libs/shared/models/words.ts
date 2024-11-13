@@ -1,7 +1,5 @@
+import { Level, Stage } from './types';
 import { TAGS } from './setting';
-
-type Level = 'beginner' | 'intermediate' | 'advanced';
-type Stage = 'New' | 'I Know It' | 'Mastered It';
 
 export type Word = {
   word: string;

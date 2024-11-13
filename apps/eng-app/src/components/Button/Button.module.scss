@@ -60,6 +60,24 @@
     }
   }
 
+  &.none {
+    border: none;
+    background-color: transparent;
+    &:disabled {
+      @extend %disabled;
+    }
+    &:hover:enabled {
+      background-color: #f4f4f4;
+      border-color: $black;
+      color: $black;
+    }
+    &:active:enabled {
+      background-color: #dedede;
+      border-color: $black;
+      color: $black;
+    }
+  }
+
   &.loading {
     pointer-events: none;
     opacity: 0.6;

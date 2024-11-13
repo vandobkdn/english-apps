@@ -20,6 +20,7 @@ export const FieldArrays = ({
   values = [],
   className,
   isDisabled,
+  isRequired,
 }: Props) => {
   const [tempValues, setTempValues] = useState<string[]>(values);
 
@@ -37,7 +38,7 @@ export const FieldArrays = ({
         onClick={() => !isDisabled && setTempValues([...tempValues, ''])}
         skin={'secondary'}
       >
-        {`${label} + `}
+        {`+ ${label}`} {`${isRequired ? '' : '(Optional)'}`}
       </Button>
 
       {tempValues.map((value, idx) => (
@@ -46,7 +47,7 @@ export const FieldArrays = ({
           name={name}
           label={`${label} ${idx + 1}`}
           value={value}
-          isRequired
+          isRequired={isRequired}
           onChange={(val) => handleChange(val, idx)}
         />
       ))}
