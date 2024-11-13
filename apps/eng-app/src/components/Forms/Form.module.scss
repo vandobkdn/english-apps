@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+
+.addWordForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+
+  .leftItems {
+  }
+
+  .rightItems {
+  }
+}
+
+@media (max-width: 768px) {
+  .addWordForm {
+    grid-template-columns: 1fr; /* 100% width for mobile */
+  }
+}

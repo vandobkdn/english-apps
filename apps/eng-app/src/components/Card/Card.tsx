@@ -3,7 +3,7 @@ import { Word } from '@english/shared-models';
 import { View, Clickable, Text, Image } from '../../primitives';
 
 import './card.scss';
-import { useAppContext } from '../../app.context';
+import { useAppContext } from '../../store';
 
 export const Card = ({ word, examples, pron }: Word) => {
   const {

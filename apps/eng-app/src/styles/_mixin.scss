@@ -1,0 +1,52 @@
+@import './variables';
+
+@mixin field {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  line-height: 1.2;
+
+  input[type='text'] {
+    @include input;
+    &:has(input:focus) {
+      outline: 1px solid;
+    }
+    &:is(textarea) {
+      height: 5em;
+      resize: none;
+    }
+  }
+}
+
+@mixin font {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: none;
+  text-decoration: none;
+  color: inherit;
+  font-weight: initial;
+  letter-spacing: normal;
+  text-shadow: none;
+}
+
+@mixin input {
+  @include font();
+  font-family: monospace;
+  align-items: center;
+  background: $white;
+  border: 1px solid $gray;
+  border-radius: $radius-s;
+  display: flex;
+  gap: $space;
+  min-height: $space;
+  padding: $space;
+  width: 100%;
+  &::placeholder {
+    color: $gray-l;
+  }
+  &:disabled {
+    background-color: $gray-l;
+  }
+}

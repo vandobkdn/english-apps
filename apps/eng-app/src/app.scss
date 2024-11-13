@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/variables';
+@import './styles/mixin';
+
+.fieldText {
+  @include field;
+}
 
 .container {
   width: 100vw;
@@ -12,6 +17,16 @@
   grid-template-rows: minmax(0, 80px) 1fr;
   grid-template-columns: 1fr;
   gap: 2 * $space;
+}
+
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+
+  small {
+    color: $gray;
+  }
 }
 
 .content {

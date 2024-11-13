@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { NAV_ITEM } from '@english/shared-models';
 
 import { View } from './primitives';
 import {
@@ -17,7 +16,7 @@ import {
   LearningWordPage,
   AddNewWordPage,
 } from './pages';
-import { useAppContext } from './app.context';
+import { useAppContext, FormProvider } from './store';
 import './app.scss';
 
 const WORD = {
@@ -38,13 +37,15 @@ const App = () => {
     <View className="container">
       <Header />
       <View className="content" tag="main">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/list-words" element={<ListWordPage />} />
-          <Route path="/my-words" element={<MyWordPage />} />
-          <Route path="/learn-words" element={<LearningWordPage />} />
-          <Route path="/add-new-words" element={<AddNewWordPage />} />
-        </Routes>
+        <FormProvider>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/list-words" element={<ListWordPage />} />
+            <Route path="/my-words" element={<MyWordPage />} />
+            <Route path="/learn-words" element={<LearningWordPage />} />
+            <Route path="/add-new-words" element={<AddNewWordPage />} />
+          </Routes>
+        </FormProvider>
       </View>
     </View>
   );

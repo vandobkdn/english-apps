@@ -1,9 +1,10 @@
 import { createElement, HTMLAttributes, ReactNode, forwardRef } from 'react';
 import classnames from 'classnames';
+import { UIClassnames } from '@english/shared-models';
 
 type Props = {
   children: ReactNode;
-  className?: string;
+  className?: UIClassnames;
   attrs?: HTMLAttributes<HTMLElement> & {
     [p: `${string}`]: string;
   };

@@ -4,4 +4,4 @@ export type Navigation =
   | 'Learning Words'
   | 'Add Word';
 
-  export type SearchTypes = 'word' | 'playlist';
+export type SearchTypes = 'word' | 'playlist';

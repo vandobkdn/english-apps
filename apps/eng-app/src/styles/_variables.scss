@@ -1,6 +1,12 @@
 $space: 1rem;
+$space-xs: $space * 0.35;
+$space-s: $space * 0.5;
 $white: #fff;
+$black: #000;
+$back-l: #0a2239;
 $green: #4caf50;
+$gray: #808080;
+$gray-l: #ccc;
 $brown: #8b4513;
 $blue: #1e90ff;
 $yellow: #ffd700;
@@ -13,3 +19,5 @@ $borderColor: #ccc;
 $boxShadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 $borderRadius: 5px;
 $scrollBgColor: #888;
+$radius: 0.2em;
+$radius-s: $radius * 0.625; // 2px

@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-import { AppContextProvider } from './app.context';
+import { AppContextProvider } from './store/app.context';
 import './styles/reset.scss';
 
 import App from './App';

@@ -1,8 +1,8 @@
+import { AddWordForm } from '../../components/Forms';
 import { View } from '../../primitives';
 
 export const AddNewWordPage = () => (
   <View>
-    This is AddNewWordPage. This page use for creating a new word.
+    <AddWordForm />
   </View>
 );
-
